@@ -58,6 +58,8 @@ class DropDbTest {
 				@Override
 				public void onSubscribe(Subscription s) {
 					System.out.println("onSubscribe");
+					// The fix that was missing!
+					s.request(1);
 				}
 				
 				@Override
